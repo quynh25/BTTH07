@@ -24,6 +24,7 @@ function removeCountry(){
 }
 //zipCode
 let zipCode = document.getElementById('zipCode')
+let zipCodeRegex = /^\d+$/;
 let statusOfZipCode = document.getElementById('statusOfZipCode')
 
 zipCode.addEventListener('focus', function(){
@@ -32,7 +33,7 @@ zipCode.addEventListener('focus', function(){
 zipCode.addEventListener('focusout', removeZipCode)
 
 function removeZipCode(){
-    if(parseInt(zipCode.value) == zipCode.value){
+    if(zipCodeRegex.test(zipCode.value)){
         statusOfZipCode.textContent='Zip code is valid'
         statusOfZipCode.style.color='blue'
        
