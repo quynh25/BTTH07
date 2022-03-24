@@ -1,1 +1,1 @@
-//sử dụng thư viện jQuery
+//code bằng Javascript thuần 
