@@ -1,0 +1,12 @@
+body{
+    border: 1px solid black;
+    height: 600px;
+    width: 450px;
+    text-align: center;
+    margin: 70px 500px;
+}
+
+table td{
+    padding: 5px 10px;
+   
+}

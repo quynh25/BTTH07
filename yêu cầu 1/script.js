@@ -1,0 +1,1 @@
+//code bằng Javascript thuần 
