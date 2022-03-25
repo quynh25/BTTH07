@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <link rel="stylesheet" href="/./yêu cầu 2/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -42,7 +42,8 @@
                 <tr>
                     <td>Address: </td>
                     <td>
-                        <input type="text" value="">
+                      
+                        <input type="text" value="" placeholder="Optional">
                         <span></span>
                     </td>
                 </tr>
@@ -50,24 +51,23 @@
                 <tr>
                     <td>Country: </td>
                     <td>
-                        <select name="country" required>
+                        <select name="country" id="country" required>
                             
                             <option value="" >(Please select a option)</option>
                             <option >Việt Nam</option>
                             <option >Hàn Quốc</option>
                             <option >Trung Quốc</option>
                             <option >Nhật Bản</option>
-
                         </select>
-                        <span></span>
+                        <span id="statusOfCountry"></span></span>
                     </td>
                 </tr>
                 
                 <tr>
                     <td>Zip Code: </td>
                     <td>
-                        <input type="text" required value="">
-                        <span></span>
+                        <input  id="zipCode"  type="text" required value="">
+                        <span  id="statusOfZipCode"></span>
                     </td>
                 </tr>
                 
@@ -102,7 +102,7 @@
                 <tr>
                     <td>About: </td>
                     <td>
-                        <textarea name=""  cols="30" rows="10"></textarea>
+                        <textarea placeholder="Optional" name=""  cols="30" rows="10"></textarea>
                         <span></span>
                     </td>
                 </tr>
@@ -110,7 +110,7 @@
                 <tr>
                     <td></td>
                     <td >
-                        <input type="submit" value="btnRegister" id="btnRegister"onclick="">
+                        <input type="submit" value="Register" id="btnRegister"onclick="">
                     </td>
                    
                 </tr>
@@ -118,9 +118,9 @@
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="/./yêu cầu 2/3dau.js"></script>
-    <script src="/./yêu cầu 2/3giua.js"></script>
-    <script src="/./yêu cầu 2/4cuoi.js"></script>
-    <script src="/./yêu cầu 2/script.js"></script>
+    <!-- <script src="3dau.js"></script>
+    <script src="3giua.js"></script>
+    <script src="4cuoi.js"></script> -->
+    <script src="script.js"></script>
 </body>
 </html>
