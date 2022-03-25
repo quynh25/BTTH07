@@ -17,10 +17,12 @@ $(document).ready(function() {
         if(checkUserID()){
             $("#statusOfUserID").text('UserID is valid');
             $("#statusOfUserID").css('color','blue')
+            $("#statusOfUserID").css('font-size','15px')
         }
         else{
             $("#statusOfUserID").text('UserID is not valid');
             $("#statusOfUserID").css('color','red')
+            $("#statusOfUserID").css('font-size','15px')
         }
     })
 })
@@ -43,10 +45,12 @@ $(document).ready(function() {
         if(checkPassword()){
             $("#statusOfPassword").text('Password is valid');
             $("#statusOfPassword").css('color','blue')
+            $("#statusOfPassword").css('font-size','15px')
         }
         else{
             $("#statusOfPassword").text('Password is not valid');
             $("#statusOfPassword").css('color','red')
+            $("#statusOfPassword").css('font-size','15px')
         }
     })
 })
@@ -69,16 +73,19 @@ $(document).ready(function() {
         if(checkName()){
             $("#statusOfName").text('Name is valid');
             $("#statusOfName").css('color','blue')
+            $("#statusOfName").css('font-size','15px')
+            
         }
         else{
             $("#statusOfName").text('Name is not valid');
             $("#statusOfName").css('color','red')
+            $("#statusOfName").css('font-size','15px')
         }
     })
 })
-
+//
 $(document).ready(function(){
-
+    //country
     function checkCountry(){
 
         let country = $('#country').val();
@@ -96,12 +103,14 @@ $(document).ready(function(){
         if( checkCountry() == true){
             $("#statusOfCountry").text('Select a country')
             $("#statusOfCountry").css('color','red')
+            $("#statusOfCountry").css('font-size','15px')
         }else{
             $("#statusOfCountry").text('Country is valid')
             $("#statusOfCountry").css('color','blue')
+            $("#statusOfCountry").css('font-size','15px')
         }
     })
-
+    //zip code
     function checkZipCode(){
 
         let zipCode = $('#zipCode').val();
@@ -120,9 +129,11 @@ $(document).ready(function(){
         if( checkZipCode() == true){
             $("#statusOfZipCode").text('Zip code is valid')
             $("#statusOfZipCode").css('color','blue')
+            $("#statusOfZipCode").css('font-size','15px')
         }else{
-            $("#statusOfZipCode").text('Zip code must be number')
+            $("#statusOfZipCode").text('Zip code is not vaid')
             $("#statusOfZipCode").css('color','red')
+            $("#statusOfZipCode").css('font-size','15px')
         }
     })
 }) 
