@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Registration Form</h1>
+        <h1 style="text-align: center;">Registration Form</h1>
     </header>
 
     <div >
@@ -71,11 +71,12 @@
                     </td>
                 </tr>
                 
+                  
                 <tr>
                     <td>Email: </td>
                     <td>
-                        <input type="email" required value="" name="email">
-                        <span></span>
+                        <input type="email" required value="" name="email" id="email">
+                        <span id="statusOfemail"></span>
                     </td>
                 </tr>
                 
@@ -83,26 +84,25 @@
                 <tr>
                     <td>Sex: </td>
                     <td>
-
-                            <input type="radio" name="gender" value="male" required>Male
-                            <input type="radio" name="gender" value="female">Female
-                            <span></span>
+                
+                            <input type="radio" name="gender" id="Male" value="Male" required>Male
+                            <input type="radio" name="gender" id="Female" value="Female">Female
+                            <span id="statusOfgender"></span>
                     </td>
                 </tr>
-
+                
                 <tr>
                     <td>Language: </td>
                     <td>
-                        <input type="checkbox" name="Language">English
-                        <input type="checkbox"  name="Language">Non English
-                        <span></span>
+                        <input checked="checked" type="checkbox" name="Language" id="english" value="English" required onclick="onlyOne(this)">English
+                        <input type="checkbox"  name="Language" id="nonenglish" value="Non English" onclick="onlyOne(this)">Non English
                     </td>
                 </tr>
 
                 <tr>
                     <td>About: </td>
                     <td>
-                        <textarea placeholder="Optional" name=""  cols="30" rows="10"></textarea>
+                        <textarea placeholder="Optional" name="" cols="30" rows="10"></textarea>
                         <span></span>
                     </td>
                 </tr>
