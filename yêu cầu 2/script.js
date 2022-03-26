@@ -59,7 +59,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     function checkName() {
         let name = $('#name').val();
-        let nameRegex = /^[a-zA-Z]/;
+        let nameRegex = /^[a-zA-Z]+$/;
         if(nameRegex.test(name)){
             return true;
         }
@@ -137,3 +137,71 @@ $(document).ready(function(){
         }
     })
 }) 
+//
+
+$(document).ready(function(){
+     //check email
+     function checkEmail(){
+        let email = $('#txtEmail').val();
+        let emailRegex = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+        if(emailRegex.test(email)){
+            return true
+        }
+        return false
+    }
+    $("#btnRegister").click(function(e){
+        e.preventDefault();
+        if(checkEmail()){
+            $("#statusOfEmail").text('Email is valid')
+            $("#statusOfEmail").css('color','blue')
+            $("#statusOfEmail").css('font-size','15px')
+        }else{
+            $("#statusOfEmail").text('Email is not valid')
+            $("#statusOfEmail").css('color','red')
+            $("#statusOfEmail").css('font-size','15px')
+        }
+    })
+    
+   
+    $("#btnRegister").click(function(e){
+        e.preventDefault();
+        let isRadioChecked1 = $('#Sex-1').is(':checked');
+        let isRadioChecked2 = $('#Sex-2').is(':checked');
+        if(isRadioChecked1 || isRadioChecked2){
+            $("#statusOfSex").text('Checkbox is valid')
+            $("#statusOfSex").css('color','blue')
+            $("#statusOfSex").css('font-size','15px')
+        }else{
+            $("#statusOfSex").text('Checkbox is not valid')
+            $("#statusOfSex").css('color','red')
+            $("#statusOfSex").css('font-size','15px')
+        }
+    })
+    //check language 
+    $(function() {
+        $("input:checkbox").on('click', function() {
+          var $box = $(this);
+          if ($box.is(":checked")) {
+            var group = "input:checkbox[name='" + $box.attr("name") + "']";
+            $(group).prop("checked", false);
+            $box.prop("checked", true);
+          } else {
+            $box.prop("checked", false);
+          }
+        });
+      });
+    $("#btnRegister").click(function(e){
+        e.preventDefault();
+        let isChecked1 = $('#Language-1').is(':checked');
+        let isChecked2 = $('#Language-2').is(':checked');
+        if(isChecked1 || isChecked2){
+            $("#statusOfLanguage").text('Checkbox is not valid')
+            $("#statusOfLanguage").css('color','blue')
+            $("#statusOfLanguage").css('font-size','15px')
+        }else{
+            $("#statusOfLanguage").text('Checkbox is not valid')
+            $("#statusOfLanguage").css('color','red')
+            $("#statusOfLanguage").css('font-size','14px')
+        }
+    })
+})

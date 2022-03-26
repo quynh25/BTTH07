@@ -74,8 +74,8 @@
                 <tr>
                     <td>Email: </td>
                     <td>
-                        <input type="email" required value="" placeholder="Must be a vaild email" name="email">
-                        <span></span>
+                        <input type="email" id="txtEmail" required value="" placeholder="Must be a vaild email" name="email">
+                        <span id="statusOfEmail"></span>
                     </td>
                 </tr>
                 
@@ -84,18 +84,18 @@
                     <td>Sex: </td>
                     <td>
 
-                            <input type="radio" name="gender" value="male" required>Male
-                            <input type="radio" name="gender" value="female">Female
-                            <span></span>
+                            <input type="radio" name="gender" value="male" id="Sex-1" required>Male
+                            <input type="radio" name="gender" value="female" id="Sex-2">Female
+                            <span id="statusOfSex"></span>
                     </td>
                 </tr>
 
                 <tr>
                     <td>Language: </td>
                     <td>
-                        <input type="checkbox" name="Language">English
-                        <input type="checkbox"  name="Language">Non English
-                        <span></span>
+                        <input type="checkbox" id="Language-1" name="Language">English
+                        <input type="checkbox" id="Language-2" name="Language">Non English
+                        <span id="statusOfLanguage"></span>
                     </td>
                 </tr>
 

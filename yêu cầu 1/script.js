@@ -43,7 +43,7 @@ function removePassword(){
 }
 //3. Name 
 let nameOfUser = document.getElementById('name')
-let nameOfUserRegex =  /^[a-zA-Z]/;
+let nameOfUserRegex =  /^[a-zA-Z]+$/;;
 
 // console.log(nameOfUserRegex)
 let statusOfName = document.getElementById('statusOfName')
@@ -129,11 +129,11 @@ function removeemail(){
     var daucham = mail.lastIndexOf('.');
     var daucach = mail.indexOf(' ');
     if((dodai<=5)|| (acong<1)||(daucham<=acong+1)||(daucach!=-1)){
-        statusOfemail.textContent = 'Email không hợp lệ'
+        statusOfemail.textContent = 'Email is not valid'
         statusOfemail.style.color = 'red'
         statusOfemail.style.fontSize='15px'
     }else{
-        statusOfemail.textContent = 'Email hợp lệ'
+        statusOfemail.textContent = 'Email is valid'
         statusOfemail.style.color = 'blue'
         statusOfemail.style.fontSize='15px'
     }
@@ -154,4 +154,4 @@ function onlyOne(checkbox) {
     checkboxes.forEach((item) => {
         if (item !== checkbox) item.checked = false
     })
-}
+}     
